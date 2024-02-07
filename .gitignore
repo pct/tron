@@ -1,2 +1,7 @@
+# vim
 env
 *~
+
+# python
+*.pyc
+__pycache__/
