@@ -1,0 +1,11 @@
+# config/database.yaml
+databases:
+  default: 'mysql'
+  mysql:
+    driver: 'mysql'
+    host: 'localhost'
+    database: 'tron'
+    user: 'root'
+    password: ''
+    prefix: ''
+

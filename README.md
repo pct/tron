@@ -1,13 +1,11 @@
 # Tron (todo)
 
-## Falcon framework with rails like orm
+## Sanic framework with rails like orm
 
-- Main: Falcon
+- Main: Sanic
 - ORM: Orator
-- Template: Mako
+- Template: Jinja2
 
 ## Install
 
-    $ pip install falcon gunicorn
-    $ pip install orator
-
+    $ pip install sanic orator
