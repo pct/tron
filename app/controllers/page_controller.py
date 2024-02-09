@@ -2,8 +2,10 @@
 from sanic import response
 from app.models.post import Post
 
+from pprint import pprint
+
 async def index(request):
-    post = Post.find(1)
-    return response.html('aaa')
-    #return response.json(post.serialize())
+    posts = await Post.all().values()
+    #pprint(posts)
+    return response.json(posts)
 
