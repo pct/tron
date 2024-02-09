@@ -1,21 +1,9 @@
-from masoniteorm.query import QueryBuilder
-from masoniteorm.connections import ConnectionResolver
+from tortoise import Tortoise
 
-DATABASES = {
-    'default': 'mysql',
-    'mysql': {
-        'driver': 'mysql',
-        'host': 'localhost',
-        'user': 'root',
-        'password': '',
-        'database': 'tron',
-        'prefix': '',
-        'port': 3306,
-        'options': {
-            'charset': 'utf8mb4',
-        },
-    },
-}
-
-DB = ConnectionResolver().set_connection_details(DATABASES)
+async def init_orm():
+    await Tortoise.init(
+        db_url='mysql://root@127.0.0.1:3306/tron',
+        modules={'models': ['app.models']}
+    )
+    await Tortoise.generate_schemas()
 
